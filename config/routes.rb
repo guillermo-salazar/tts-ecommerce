@@ -7,7 +7,14 @@ Rails.application.routes.draw do
 
   get 'store/index'
 
-  resources :products
+  resources :products do 
+    get :who_bought, on: :member
+    # member do
+    #   get :who_bought
+    # end
+  end
+  
+  
   root 'store#index', as: :store
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

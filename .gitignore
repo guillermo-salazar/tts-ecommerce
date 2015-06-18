@@ -17,3 +17,5 @@
 
 # Ignore spring folder.
 /spring
+
+.env
